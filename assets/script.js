@@ -92,26 +92,36 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  // User prompts
-  var characterAmount = prompt("How many characters should the password be?");
-  var addLowercase = confirm("Would you like to include Lowercase characters?");
-  var addUppercase = confirm("Would you like to include Uppercase characters?");
-  var addNumeric = confirm("Would you like to include Numeric characters?");
-  var addSpecialChars = confirm("Would you like to include Special characters?");
-  var characterOptions = []
-
-  // Create character array
-  if (addLowercase == true) {
-    characterOptions = characterOptions.concat(lowerCasedCharacters);
-  } else if (addUppercase == true) {
-    characterOptions = characterOptions.concat(upperCasedCharacters == true);
-  } else if (addNumeric == true) {
-    characterOptions = characterOptions.concat(numericCharacters == true);
-  } else if (addSpecialChars == true) {
-    characterOptions = characterOptions.concat(specialCharacters)
+  // Prompt: Password length
+  for (var i=0; i<1; i++) {
+    var characterAmount = prompt("How many characters should the password be?");
+    // If password length less than minimum of 10, user is prompted again.
+    if (characterAmount < 10) {
+      alert("Your password must be at least 10 characters long. \nPlease type another password length.");
+      i = i-1;
+    } else if (characterAmount > 64) {
+      alert("Your password can only be a maximum of 64 characters. \nPlease type another password length.");
+      i = i-1;
+    }
   }
-  console.log(characterOptions)
-  return characterOptions
+  // var addLowercase = confirm("Would you like to include Lowercase characters?");
+  // var addUppercase = confirm("Would you like to include Uppercase characters?");
+  // var addNumeric = confirm("Would you like to include Numeric characters?");
+  // var addSpecialChars = confirm("Would you like to include Special characters?");
+  // var characterOptions = []
+
+  // // Create character array
+  // if (addLowercase == true) {
+  //   characterOptions = characterOptions.concat(lowerCasedCharacters);
+  // } else if (addUppercase == true) {
+  //   characterOptions = characterOptions.concat(upperCasedCharacters == true);
+  // } else if (addNumeric == true) {
+  //   characterOptions = characterOptions.concat(numericCharacters == true);
+  // } else if (addSpecialChars == true) {
+  //   characterOptions = characterOptions.concat(specialCharacters)
+  // }
+  console.log(characterAmount)
+  return //characterOptions
 }
 
 getPasswordOptions()
