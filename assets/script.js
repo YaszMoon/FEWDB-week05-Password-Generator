@@ -104,24 +104,35 @@ function getPasswordOptions() {
       i = i-1;
     }
   }
-  // var addLowercase = confirm("Would you like to include Lowercase characters?");
-  // var addUppercase = confirm("Would you like to include Uppercase characters?");
-  // var addNumeric = confirm("Would you like to include Numeric characters?");
-  // var addSpecialChars = confirm("Would you like to include Special characters?");
-  // var characterOptions = []
 
-  // // Create character array
-  // if (addLowercase == true) {
-  //   characterOptions = characterOptions.concat(lowerCasedCharacters);
-  // } else if (addUppercase == true) {
-  //   characterOptions = characterOptions.concat(upperCasedCharacters == true);
-  // } else if (addNumeric == true) {
-  //   characterOptions = characterOptions.concat(numericCharacters == true);
-  // } else if (addSpecialChars == true) {
-  //   characterOptions = characterOptions.concat(specialCharacters)
-  // }
-  console.log(characterAmount)
-  return //characterOptions
+  // Create characterOptions array for generating password
+  var characterOptions = []
+
+  // Prompt: Lowercase characters
+  var addLowercase = confirm("Would you like to include Lowercase characters?");
+  if (addLowercase == true) {
+    characterOptions = characterOptions.concat(lowerCasedCharacters);
+  };
+
+  // Prompt: Uppercase characters
+  var addUppercase = confirm("Would you like to include Uppercase characters?");
+  if (addUppercase == true) {
+    characterOptions = characterOptions.concat(upperCasedCharacters);
+  }
+
+  // Prompt: Numeric characters
+  var addNumeric = confirm("Would you like to include Numeric characters?");
+  if (addNumeric == true) {
+    characterOptions = characterOptions.concat(numericCharacters);
+  }
+
+  // Prompt: Special characters
+  var addSpecialChars = confirm("Would you like to include Special characters?");
+  if (addSpecialChars == true) {
+    characterOptions = characterOptions.concat(specialCharacters)
+  }
+  
+  return characterOptions
 }
 
 getPasswordOptions()
