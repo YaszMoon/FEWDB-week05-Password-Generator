@@ -88,10 +88,33 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+  // User prompts
+  var characterAmount = prompt("How many characters should the password be?");
+  var addLowercase = confirm("Would you like to include Lowercase characters?");
+  var addUppercase = confirm("Would you like to include Uppercase characters?");
+  var addNumeric = confirm("Would you like to include Numeric characters?");
+  var addSpecialChars = confirm("Would you like to include Special characters?");
+  var characterOptions = []
 
+  // Create character array
+  if (addLowercase == true) {
+    characterOptions = characterOptions.concat(lowerCasedCharacters);
+  } else if (addUppercase == true) {
+    characterOptions = characterOptions.concat(upperCasedCharacters == true);
+  } else if (addNumeric == true) {
+    characterOptions = characterOptions.concat(numericCharacters == true);
+  } else if (addSpecialChars == true) {
+    characterOptions = characterOptions.concat(specialCharacters)
+  }
+  console.log(characterOptions)
+  return characterOptions
 }
+
+getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
