@@ -135,13 +135,14 @@ function getPasswordOptions() {
   return characterOptions
 }
 
-getPasswordOptions()
-
+arr = getPasswordOptions()
 // Function for getting a random element from an array
 function getRandom(arr) {
+  n = Math.floor((Math.random() * arr.length) + 1);
 
+  return n
 }
-
+console.log(getRandom(arr))
 // Function to generate password with user input
 function generatePassword() {
 
