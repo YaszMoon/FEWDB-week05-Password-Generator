@@ -2,7 +2,7 @@
 
 The challenge for this week is to create a password generator.
 
-Visit the deployd page [here](#).
+Visit the deployed page [here](#).
 
 ## User Story
 
