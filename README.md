@@ -2,7 +2,7 @@
 
 The challenge for this week is to create a password generator.
 
-Visit the deployd page [here](#).
+Visit the deployd page [here](https://yaszmoon.github.io/FEWDB-week05/).
 
 ## User Story
 
@@ -26,3 +26,9 @@ Generator must present a series of prompts for password criteria:
 Code should validate for each input and at least one character type should be selected.
 
 Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
+
+## Visuals
+
+Example of generated password of 30 characters using all available password character options.
+
+![Password Generator Example](./assets/password_generator_example.png)
