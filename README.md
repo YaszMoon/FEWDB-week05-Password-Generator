@@ -1,4 +1,4 @@
-# FEWDB-week05
+# Password Generator
 
 The challenge for this week is to create a password generator.
 
