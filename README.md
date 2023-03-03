@@ -2,7 +2,7 @@
 
 The challenge for this week is to create a password generator.
 
-Visit the deployed page [here](https://yaszmoon.github.io/FEWDB-week05/).
+Visit the deployed page [here](https://yaszmoon.github.io/FEWDB-week05-Password-Generator/).
 
 
 ## User Story
